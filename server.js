@@ -8,7 +8,7 @@ const path = require("path")
 
 dotenv.config()
 const PORT = process.env.PORT || 5000
-const MONGO = process.env.MONGODB_URI || "mongodb://localhost:27017/usertable"
+const MONGO = process.env.MONGODB_URI || "mongodb+srv://admin:admin@cluster0.1lbvawd.mongodb.net/crud-db"
 
 mongoose.connect(MONGO).then(()=>{
     const app = express();
@@ -92,14 +92,15 @@ mongoose.connect(MONGO).then(()=>{
             .sendMail(mail, (err)=>{
                 if(err)
                 {
+                    res.send(true)
                     return console.log(err)
                 }
                 else
                 {
+                    res.send(err)
                     return
                 }
             })
-            res.send(true)
         }
         catch (error)
         {
