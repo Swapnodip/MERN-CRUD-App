@@ -15,9 +15,9 @@ mongoose.connect(MONGO).then(()=>{
     app.use(express.json())
     app.use(cors())
 
-    app.get("/",(req,res)=>{
-        res.send("Hello world")
-    })
+    // app.get("/",(req,res)=>{
+    //     res.send("Hello world")
+    // })
 
     //routes
 
