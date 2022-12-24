@@ -84,7 +84,6 @@ mongoose.connect(MONGO).then(()=>{
                     user: "test346785@gmail.com",
                     pass: "njwckulnmdirabyw"
                 },
-                port:456,
                 host:"smtp.gmail.com",
                 secure: true,
                 tls : { rejectUnauthorized: false }
